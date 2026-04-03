@@ -1,4 +1,5 @@
 import { MenuItem } from '../types/index'
+import { bananaCake } from '../images/images'
 
 const cortadoImage = 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop'
 
@@ -81,28 +82,45 @@ export const menuItems: MenuItem[] = [
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },
   {
-    id: 'chocolate-croissant',
-    title: 'Chocolate Croissant',
-    description: 'Buttery pastry with dark chocolate, baked fresh to order.',
-    image: cortadoImage,
+    id: 'banana-cake',
+    title: 'Banana Bread',
+    description: 'Browned butter banana bread with a beautiful tahini swirl.',
+    image: bananaCake,
     type: 'food',
-    price: '$5.50',
-    isSignature: false,
+    price: '$0.00',
+    isSignature: true,
     recipe: `
     Ingredients:
-    - 1 sheets puff pastry
-    - 50g dark chocolate
-    - 1 egg (for egg wash)
-    - Pinch of sea salt
+
+    Bread:
+    - 4 overripe bananas, mashed
+    - 2 eggs
+    - 1/2 cup browned butter
+    - 3/4 cup sugar
+    - 2 tsp vanilla
+    - 1 1/2 cups all purpose flour
+    - 1 tsp baking soda
+    - 1/2 tsp salt
+    - 1 tsp cinnamon
+    - 1/2 tsp nutmeg (optional)
+    - 1 cup toffee chips or chocolate chips (or both)
+    
+    Tahini Swirl:
+    - 1/4 cup tahini
+    - 3 tbsp honey
+    - pinch of salt
+
+    Glaze:
+    - 1 cup powedered sugar
+    - 2 - 3 tbsp milk
     
     Instructions:
-    1. Preheat oven to 200°C (400°F)
-    2. Cut pastry into rectangles
-    3. Place 2 chocolate bars on each rectangle
-    4. Roll tightly and seal edges
-    5. Apply egg wash
-    6. Bake for 15-18 minutes until golden
-    7. Cool slightly and serve warm
+    1. Preheat oven to 350 F and grease a 9 x 13 pan
+    2. Combine all wet banana bread ingredients until homogenous -- leave some chunks in the bananas
+    3. Carefully fold in dry ingredients until just combined. Fold in toffee or chocolate chips
+    4. Add batter to the pan. Dallop 5 or 6 spoonfuls of tahini mixture on top once settled. Use a chopstick to create a swirl pattern. Optionally, add extra chocolate chips on top.
+    5. Bake 30 - 35 minutes until the top is browned and a toothpick comes out clean.
+    6. Let cool fully before drizzling glaze over the top.
     `,
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },

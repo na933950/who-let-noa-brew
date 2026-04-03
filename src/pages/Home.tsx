@@ -5,6 +5,8 @@ import MenuItemCard from '../components/MenuItemCard'
 import RecipeModal from '../components/RecipeModal'
 import { menuItems } from '../data/items'
 import { MenuItem } from '../types/index'
+import { makingChai } from '../images/images'
+import { SOCIAL_LINKS } from '../constants/links'
 
 const features = [
   {
@@ -14,7 +16,7 @@ const features = [
   },
   {
     title: 'Signature Chai',
-    description: 'I change the recipe every time. Whole spices toasted daily, slow-simmered with Assam tea for a rich, authentic cup.',
+    description: 'The recipe changes a little every time. Whole spices toasted daily, slow-simmered with Assam tea for a rich, authentic cup.',
     icon: '☕',
   },
   {
@@ -39,7 +41,7 @@ export default function Home() {
           </>
         }
         subtitle="A one day experience doubling as a grad party. When posed the question: who let Noa brew, we deliver. All items made with care, and recipes linked"
-        image="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1000&auto=format&fit=crop"
+        image={makingChai}
       />
 
       <Features features={features} />
@@ -103,7 +105,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#"
+              href={SOCIAL_LINKS.instagram}
               className="inline-block bg-wlnb-brown text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-wlnb-dark transition-all"
             >
               Follow on Instagram

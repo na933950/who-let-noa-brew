@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { SOCIAL_LINKS } from '../constants/links'
 
 export default function Navigation() {
   return (
@@ -10,7 +11,7 @@ export default function Navigation() {
         
         <div className="flex items-center gap-8 text-sm font-medium text-wlnb-tan">
           <a href="#menu" className="hover:text-wlnb-brown transition-colors">Menu</a>
-          <a href="#" className="hover:text-wlnb-brown transition-colors flex items-center gap-1.5">
+          <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-wlnb-brown transition-colors flex items-center gap-1.5">
             Instagram
             <span className="text-xs">↗</span>
           </a>

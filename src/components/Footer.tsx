@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { SOCIAL_LINKS } from '../constants/links'
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
               <h4 className="text-sm font-medium tracking-tight mb-4 text-wlnb-cream">Links</h4>
               <ul className="space-y-3 text-sm text-wlnb-beige">
                 <li><a href="#menu" className="hover:text-white transition-colors">Menu</a></li>
-                <li><a href="#" className="hover:text-white transition-colors flex items-center gap-2">Instagram <span className="text-xs">↗</span></a></li>
+                <li><a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">Instagram <span className="text-xs">↗</span></a></li>
               </ul>
             </div>
           </div>
