@@ -1,40 +1,44 @@
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import HeroHome from '../components/HeroHome'
 import Features from '../components/Features'
 import MenuItemCard from '../components/MenuItemCard'
+import RecipeModal from '../components/RecipeModal'
 import { menuItems } from '../data/items'
+import { MenuItem } from '../types/index'
 
 const features = [
   {
-    title: 'Dialed Espresso',
-    description: 'Using fresh, locally roasted beans. Every shot is carefully weighed and dialed in for perfect extraction.',
-    icon: '☕',
+    title: 'Homemade pastries',
+    description: "Each crafted with precision. If you think I'm a tryhard foodie normally, just wait until you see these breads.",
+    icon: '🥐',
   },
   {
     title: 'Signature Chai',
-    description: 'Our beloved namesake. Whole spices toasted daily, slow-simmered with Assam tea for a rich, authentic cup.',
-    icon: '🍃',
+    description: 'I change the recipe every time. Whole spices toasted daily, slow-simmered with Assam tea for a rich, authentic cup.',
+    icon: '☕',
   },
   {
     title: 'Home Environment',
-    description: 'Skip the long cafe lines. Drop by, grab a drink, listen to good music, and hang out in a cozy apartment setting.',
+    description: 'For my friends to hang out, mingle, and take advantage of free food! Enjoy this cozy environment and have fun!',
     icon: '🏠',
   },
 ]
 
 export default function Home() {
+  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)
   const beverages = menuItems.filter(item => item.type === 'beverage')
+  const food = menuItems.filter(item => item.type === 'food')
 
   return (
     <div className="bg-wlnb-cream">
       <HeroHome
         title={
           <>
-            Proper coffee.<br />
+            Fancy pastries<br />
             <span className="text-wlnb-accent">Slow brewed chai.</span>
           </>
         }
-        subtitle="An intimate, one-day only neighborhood cafe experience right from our kitchen. Serving carefully dialed espresso and our signature slow-simmered chai."
+        subtitle="A one day experience doubling as a grad party. When posed the question: who let Noa brew, we deliver. All items made with care, and recipes linked"
         image="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1000&auto=format&fit=crop"
       />
 
@@ -44,32 +48,47 @@ export default function Home() {
       <section id="menu" className="py-24 max-w-6xl mx-auto px-6">
         <div className="flex items-end justify-between mb-12">
           <div>
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-2">The Menu</h2>
-            <p className="text-base text-wlnb-tan">Oat and whole milk available. Iced or hot.</p>
+            <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-2">Beverages</h2>
+            <p className="text-base text-wlnb-tan">Carefully dialed espresso and signature chai.</p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {beverages.map((item) => (
             <MenuItemCard
               key={item.id}
-              id={item.id}
               title={item.title}
               description={item.description}
               price={item.price}
+              image={item.image}
               isSignature={item.isSignature}
+              onClick={() => setSelectedItem(item)}
             />
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <p className="text-wlnb-tan mb-6">More items available on the day. Check back soon!</p>
-          <Link
-            to="#menu"
-            className="inline-block text-wlnb-brown font-medium text-sm hover:text-wlnb-accent transition-colors"
-          >
-            ↓ Full menu coming soon
-          </Link>
+        {/* Food Section */}
+        <div className="mt-20 pt-12 border-t border-wlnb-beige">
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-2">Pastries & Baked Goods</h2>
+              <p className="text-base text-wlnb-tan">Homemade with love and precision.</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {food.map((item) => (
+              <MenuItemCard
+                key={item.id}
+                title={item.title}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+                isSignature={item.isSignature}
+                onClick={() => setSelectedItem(item)}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -77,10 +96,10 @@ export default function Home() {
       <section className="bg-wlnb-light border-t border-wlnb-beige py-16">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-medium tracking-tight mb-4 text-wlnb-brown">
-            Ready to visit?
+            Want to see more?
           </h2>
           <p className="text-wlnb-tan mb-8">
-            Follow us on Instagram for updates and to get the exact location details.
+            Follow me on Instagram for updates, video recaps, and recipes!
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -92,6 +111,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Recipe Modal */}
+      <RecipeModal
+        item={selectedItem}
+        isOpen={!!selectedItem}
+        onClose={() => setSelectedItem(null)}
+      />
     </div>
   )
 }

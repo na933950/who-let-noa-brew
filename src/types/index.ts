@@ -8,6 +8,7 @@ export interface MenuItem {
   isSignature?: boolean
   recipe?: string
   instagramReel?: string
+  videoUrl?: string
 }
 
 export interface HeroProps {

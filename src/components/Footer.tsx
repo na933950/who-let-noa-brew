@@ -10,7 +10,7 @@ export default function Footer() {
               wlnb.
             </Link>
             <p className="text-sm text-wlnb-beige leading-relaxed">
-              A one-day home cafe experiment. Bringing good coffee, slow chai, and neighborhood vibes straight from the kitchen.
+              A one-day home cafe experiment. Bringing great pastries, slow chai, and neighborhood vibes straight from the kitchen.
             </p>
           </div>
 
@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-wlnb-darker pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-wlnb-tan">
-          <p>© 2024 Who Let Noa Brew. One day only.</p>
+          <p>© 2026 Who Let Noa Brew. One day only.</p>
         </div>
       </div>
     </footer>

@@ -1,34 +1,58 @@
 import { MenuItem } from '../types/index'
 
+const cortadoImage = 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop'
+
 export const menuItems: MenuItem[] = [
   {
-    id: 'pour-over',
-    title: 'Pour Over',
-    description: 'Rotating single-origin beans, hand-poured for a clean, bright, and nuanced cup.',
-    image: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1000&auto=format&fit=crop',
+    id: 'cortado',
+    title: 'Cortado',
+    description: 'Double shot of our house espresso blend with perfectly steamed milk.',
+    image: cortadoImage,
+    type: 'beverage',
+    price: '$4.50',
+    isSignature: false,
+    recipe: `
+    Ingredients:
+    - 2 shots espresso (2 oz)
+    - 1 oz steamed milk
+    - Thin microfoam layer
+    
+    Instructions:
+    1. Pull 2 shots of espresso into a 3-4oz cup
+    2. Steam milk to 65-70°C
+    3. Pour steamed milk and microfoam
+    4. Serve immediately
+    `,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  },
+  {
+    id: 'latte',
+    title: 'Latte',
+    description: 'Silky espresso with velvety steamed milk and a touch of foam.',
+    image: cortadoImage,
     type: 'beverage',
     price: '$5.00',
     isSignature: false,
     recipe: `
     Ingredients:
-    - 20-25g fresh ground coffee (medium grind)
-    - 400ml hot water (195-205°C / 383-401°F)
-    - Filter paper
+    - 1-2 shots espresso (1-2 oz)
+    - 8-10 oz steamed milk
+    - 1/4 inch milk foam
     
     Instructions:
-    1. Rinse the filter with hot water and discard
-    2. Add ground coffee to the filter
-    3. Bloom: Pour just enough hot water to saturate grounds (about 50ml)
-    4. Wait 30 seconds
-    5. Pour the remaining water in a circular motion (about 2-3 minutes total)
-    6. Serve immediately
+    1. Pull 1-2 shots of espresso into the cup
+    2. Steam milk to 65-70°C
+    3. Pour steamed milk into espresso
+    4. Top with light layer of foam
+    5. Serve immediately
     `,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },
   {
     id: 'classic-masala-chai',
     title: 'Classic Masala Chai',
-    description: 'Our signature blend of Assam black tea, green cardamom, fresh ginger, and whole spices.',
-    image: 'https://images.unsplash.com/photo-1597318127914-e7b1fcb5f3f3?q=80&w=1000&auto=format&fit=crop',
+    description: 'Our signature blend of Assam black tea, cardamom, ginger, and whole spices.',
+    image: cortadoImage,
     type: 'beverage',
     price: '$6.00',
     isSignature: true,
@@ -54,32 +78,119 @@ export const menuItems: MenuItem[] = [
     7. Bring to a gentle boil
     8. Strain and serve hot
     `,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },
   {
-    id: 'cortado-latte',
-    title: 'Cortado / Latte',
-    description: 'Double shot of our house espresso blend, served with perfectly steamed milk of your choice.',
-    image: 'https://images.unsplash.com/photo-1509785307050-d4066910ec1e?q=80&w=1000&auto=format&fit=crop',
-    type: 'beverage',
-    price: '$4.50+',
+    id: 'chocolate-croissant',
+    title: 'Chocolate Croissant',
+    description: 'Buttery pastry with dark chocolate, baked fresh to order.',
+    image: cortadoImage,
+    type: 'food',
+    price: '$5.50',
     isSignature: false,
     recipe: `
-    Ingredients (Cortado - 3oz):
-    - 2 shots espresso (2 oz)
-    - 1 oz steamed milk
-    
-    Ingredients (Latte - 12oz):
-    - 1-2 shots espresso (1-2 oz)
-    - 8-10 oz steamed milk
-    - 1/4 inch milk foam
+    Ingredients:
+    - 1 sheets puff pastry
+    - 50g dark chocolate
+    - 1 egg (for egg wash)
+    - Pinch of sea salt
     
     Instructions:
-    1. Pull 1-2 shots of espresso into the cup
-    2. Froth your choice of milk to 65-70°C (149-158°F)
-    3. Pour steamed milk into espresso
-    4. Top with light layer of foam
-    5. Serve immediately
+    1. Preheat oven to 200°C (400°F)
+    2. Cut pastry into rectangles
+    3. Place 2 chocolate bars on each rectangle
+    4. Roll tightly and seal edges
+    5. Apply egg wash
+    6. Bake for 15-18 minutes until golden
+    7. Cool slightly and serve warm
     `,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  },
+  {
+    id: 'almond-biscotti',
+    title: 'Almond Biscotti',
+    description: 'Crispy twice-baked Italian almond cookies, perfect with espresso.',
+    image: cortadoImage,
+    type: 'food',
+    price: '$4.00',
+    isSignature: false,
+    recipe: `
+    Ingredients:
+    - 2 cups flour
+    - 1 cup sugar
+    - 3 eggs
+    - 1 cup sliced almonds
+    - 1 tsp vanilla extract
+    - 1 tsp baking powder
+    
+    Instructions:
+    1. Mix dry ingredients
+    2. Beat eggs with sugar until fluffy
+    3. Fold in almonds and vanilla
+    4. Combine wet and dry ingredients
+    5. Form into loaves on baking sheet
+    6. Bake at 180°C for 25 minutes
+    7. Slice and bake again for 10 minutes
+    8. Cool on wire rack
+    `,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  },
+  {
+    id: 'matcha-scone',
+    title: 'Matcha Scone',
+    description: 'Light and fluffy scone infused with ceremonial matcha powder.',
+    image: cortadoImage,
+    type: 'food',
+    price: '$5.00',
+    isSignature: false,
+    recipe: `
+    Ingredients:
+    - 2 cups flour
+    - 1/2 cup sugar
+    - 3 tbsp matcha powder
+    - 1/2 cup butter (cold, diced)
+    - 1/2 cup cream
+    - 1 egg
+    - 1 tsp baking powder
+    
+    Instructions:
+    1. Sift flour, matcha, and baking powder together
+    2. Cut in cold butter until crumbly
+    3. Mix in sugar
+    4. Beat egg and combine with cream
+    5. Fold wet into dry ingredients
+    6. Form into scones
+    7. Bake at 200°C for 15-18 minutes
+    8. Serve warm with jam and cream
+    `,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  },
+  {
+    id: 'pistachio-cookies',
+    title: 'Pistachio Cookies',
+    description: 'Delicate pistachio butter cookies with a hint of cardamom.',
+    image: cortadoImage,
+    type: 'food',
+    price: '$4.50',
+    isSignature: false,
+    recipe: `
+    Ingredients:
+    - 1 cup pistachio butter
+    - 1/2 cup sugar
+    - 1 egg
+    - 1 tsp vanilla extract
+    - 1/4 tsp cardamom powder
+    - 1/2 tsp baking powder
+    
+    Instructions:
+    1. Mix pistachio butter and sugar
+    2. Beat in egg and vanilla
+    3. Fold in cardamom and baking powder
+    4. Drop spoonfuls onto baking sheet
+    5. Bake at 180°C for 12-15 minutes
+    6. Cool on wire rack before serving
+    `,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },
 ]
 
