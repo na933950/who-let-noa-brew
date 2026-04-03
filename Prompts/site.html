@@ -1,0 +1,225 @@
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Let Noa Brew?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        /* Custom scrollbar to match the aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E8DCCB;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4BCA3;
+        }
+    </style>
+</head>
+<body class="bg-[#FDFBF7] text-[#3B291A] antialiased selection:bg-[#B3541E] selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navigation (Sticky Glassmorphism) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#FDFBF7]/80 backdrop-blur-xl border-b border-[#E8DCCB]/60">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 text-base font-medium tracking-tight">
+                <iconify-icon icon="solar:cup-paper-linear" width="20" height="20"></iconify-icon>
+                wlnb.
+            </a>
+            
+            <div class="flex items-center gap-8 text-sm font-medium text-[#7A6352]">
+                <a href="#menu" class="hover:text-[#3B291A] transition-colors">Menu</a>
+                <a href="#" class="hover:text-[#3B291A] transition-colors flex items-center gap-1.5">
+                    Instagram
+                    <iconify-icon icon="solar:arrow-right-up-linear" width="14" height="14"></iconify-icon>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-16">
+        
+        <!-- Hero Section -->
+        <section class="relative max-w-6xl mx-auto px-6 py-24 md:py-32 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 overflow-hidden">
+            <div class="w-full md:w-1/2 flex flex-col items-start z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8DCCB]/50 border border-[#E8DCCB] mb-6">
+                    <span class="w-2 h-2 rounded-full bg-[#B3541E] animate-pulse"></span>
+                    <span class="text-xs font-medium tracking-wide uppercase text-[#7A6352]">One-day home cafe</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-medium tracking-tight leading-[1.1] mb-6">
+                    Proper coffee.<br>
+                    <span class="text-[#B3541E]">Slow brewed chai.</span>
+                </h1>
+                
+                <p class="text-lg text-[#7A6352] mb-8 max-w-md leading-relaxed">
+                    An intimate, one-day only neighborhood cafe experience right from our kitchen. Serving carefully dialed espresso and our signature slow-simmered chai.
+                </p>
+
+                <!-- Time & Location Card -->
+                <div class="flex flex-col gap-4 w-full max-w-md p-5 rounded-2xl bg-[#F6EFE6] border border-[#E8DCCB] mb-10">
+                    <div class="flex items-start gap-3">
+                        <div class="mt-0.5 text-[#B3541E]">
+                            <iconify-icon icon="solar:calendar-date-linear" width="20" height="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-[#3B291A]">This Saturday</p>
+                            <p class="text-xs text-[#7A6352] mt-0.5">9:00 AM — 2:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-px bg-[#E8DCCB]/60"></div>
+                    <div class="flex items-start gap-3">
+                        <div class="mt-0.5 text-[#B3541E]">
+                            <iconify-icon icon="solar:map-point-linear" width="20" height="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-[#3B291A]">The Apartment</p>
+                            <p class="text-xs text-[#7A6352] mt-0.5">DM us on Instagram for the exact address &amp; entry code.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                    <a href="#menu" class="w-full sm:w-auto text-center bg-[#3B291A] text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-[#2C1E16] transition-all shadow-sm hover:shadow-md">
+                        View the Menu
+                    </a>
+                    <a href="#" class="w-full sm:w-auto text-center bg-transparent border border-[#E8DCCB] text-[#3B291A] text-sm font-medium px-6 py-3 rounded-full hover:bg-[#E8DCCB]/30 transition-all flex items-center justify-center gap-2 group">
+                        <iconify-icon icon="solar:camera-linear" width="16" height="16"></iconify-icon>
+                        Follow on IG
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 relative">
+                <!-- Decorative background blob -->
+                <div class="absolute inset-0 bg-[#E8DCCB] rounded-full blur-3xl opacity-40 transform scale-90 translate-y-12"></div>
+                
+                <div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl shadow-[#3B291A]/10 border border-[#E8DCCB]/50">
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Pouring latte art" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#3B291A]/40 to-transparent"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="bg-[#F6EFE6] py-24 border-y border-[#E8DCCB]">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-medium tracking-tight mb-4">Crafted for the day</h2>
+                    <p class="text-base text-[#7A6352]">A focused menu of specialty coffee and traditional chai, prepared with the same care as your favorite local shop, right from home.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-[#FDFBF7] p-8 rounded-2xl border border-[#E8DCCB] hover:shadow-lg transition-shadow duration-300 group">
+                        <div class="w-12 h-12 bg-[#F6EFE6] rounded-xl flex items-center justify-center mb-6 text-[#B3541E] group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="solar:cup-hot-linear" width="24" height="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-xl font-medium tracking-tight mb-3">Dialed Espresso</h3>
+                        <p class="text-sm text-[#7A6352] leading-relaxed">Using fresh, locally roasted beans. Every shot is carefully weighed and dialed in for perfect extraction.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-[#FDFBF7] p-8 rounded-2xl border border-[#E8DCCB] hover:shadow-lg transition-shadow duration-300 group">
+                        <div class="w-12 h-12 bg-[#F6EFE6] rounded-xl flex items-center justify-center mb-6 text-[#B3541E] group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="solar:leaf-linear" width="24" height="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-xl font-medium tracking-tight mb-3">Signature Chai</h3>
+                        <p class="text-sm text-[#7A6352] leading-relaxed">Our beloved namesake. Whole spices toasted daily, slow-simmered with Assam tea for a rich, authentic cup.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-[#FDFBF7] p-8 rounded-2xl border border-[#E8DCCB] hover:shadow-lg transition-shadow duration-300 group">
+                        <div class="w-12 h-12 bg-[#F6EFE6] rounded-xl flex items-center justify-center mb-6 text-[#B3541E] group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="solar:home-smile-linear" width="24" height="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-xl font-medium tracking-tight mb-3">Home Environment</h3>
+                        <p class="text-sm text-[#7A6352] leading-relaxed">Skip the long cafe lines. Drop by, grab a drink, listen to good music, and hang out in a cozy apartment setting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-24 max-w-6xl mx-auto px-6">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-medium tracking-tight mb-2">The Menu</h2>
+                    <p class="text-base text-[#7A6352]">Oat and whole milk available. Iced or hot.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Menu Item 1 -->
+                <div class="flex flex-col p-6 rounded-2xl bg-white border border-[#E8DCCB] hover:border-[#B3541E]/30 transition-colors">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-lg font-medium tracking-tight">Pour Over</h4>
+                        <span class="text-sm font-medium text-[#7A6352]">$5.00</span>
+                    </div>
+                    <p class="text-sm text-[#7A6352] mb-6 flex-grow">Rotating single-origin beans, hand-poured for a clean, bright, and nuanced cup.</p>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="flex flex-col p-6 rounded-2xl bg-white border border-[#E8DCCB] hover:border-[#B3541E]/30 transition-colors relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-[#B3541E] text-white text-[10px] font-medium px-2 py-1 rounded-bl-lg uppercase tracking-wider">Signature</div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-lg font-medium tracking-tight">Classic Masala Chai</h4>
+                        <span class="text-sm font-medium text-[#7A6352]">$6.00</span>
+                    </div>
+                    <p class="text-sm text-[#7A6352] mb-6 flex-grow">Our signature blend of Assam black tea, green cardamom, fresh ginger, and whole spices.</p>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="flex flex-col p-6 rounded-2xl bg-white border border-[#E8DCCB] hover:border-[#B3541E]/30 transition-colors">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-lg font-medium tracking-tight">Cortado / Latte</h4>
+                        <span class="text-sm font-medium text-[#7A6352]">$4.50+</span>
+                    </div>
+                    <p class="text-sm text-[#7A6352] mb-6 flex-grow">Double shot of our house espresso blend, served with perfectly steamed milk of your choice.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#2C1E16] text-[#FDFBF7] pt-16 pb-8 mt-auto">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-16">
+                
+                <div class="max-w-sm">
+                    <a href="#" class="flex items-center gap-2 text-xl font-medium tracking-tight mb-4">
+                        <iconify-icon icon="solar:cup-paper-linear" width="24" height="24"></iconify-icon>
+                        wlnb.
+                    </a>
+                    <p class="text-sm text-[#E8DCCB] leading-relaxed">
+                        A one-day home cafe experiment. Bringing good coffee, slow chai, and neighborhood vibes straight from the kitchen.
+                    </p>
+                </div>
+
+                <div class="flex gap-8">
+                    <div>
+                        <h4 class="text-sm font-medium tracking-tight mb-4 text-[#FDFBF7]">Links</h4>
+                        <ul class="space-y-3 text-sm text-[#E8DCCB]">
+                            <li><a href="#menu" class="hover:text-white transition-colors">Menu</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2">Instagram <iconify-icon icon="solar:arrow-right-up-linear" width="12"></iconify-icon></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-[#4A3728] pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#8D7B68]">
+                <p>© 2024 Who Let Noa Brew. One day only.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body></html>
