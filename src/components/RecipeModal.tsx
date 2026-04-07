@@ -7,11 +7,16 @@ interface RecipeModalProps {
   onClose: () => void
 }
 
+const isInstagramEmbed = (value: string) => value.trim().startsWith('<blockquote')
+
 export default function RecipeModal({ item, isOpen, onClose }: RecipeModalProps) {
   const [activeTab, setActiveTab] = useState<'recipe' | 'video'>('recipe')
 
   useEffect(() => {
-    if (isOpen && item?.instagramReel && (window as any).instgrm) {
+    const hasInstagram =
+      item?.instagramReel ||
+      (item?.videoUrl && isInstagramEmbed(item.videoUrl))
+    if (isOpen && hasInstagram && (window as any).instgrm) {
       (window as any).instgrm.Embeds.process()
     }
   }, [isOpen, item])
@@ -96,17 +101,21 @@ export default function RecipeModal({ item, isOpen, onClose }: RecipeModalProps)
                 <div>
                   <h3 className="text-lg font-medium text-wlnb-brown mb-4">Video Guide</h3>
                   <div className="flex justify-center">
-                    <div className="w-full max-w-xs">
-                      <div className="aspect-[9/16] bg-wlnb-light rounded-xl overflow-hidden">
-                        <iframe
-                          src={item.videoUrl}
-                          title={`${item.title} - Video Guide`}
-                          className="w-full h-full"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        />
+                    {isInstagramEmbed(item.videoUrl) ? (
+                      <div className="w-full max-w-sm" dangerouslySetInnerHTML={{ __html: item.videoUrl }} />
+                    ) : (
+                      <div className="w-full max-w-xs">
+                        <div className="aspect-[9/16] bg-wlnb-light rounded-xl overflow-hidden">
+                          <iframe
+                            src={item.videoUrl}
+                            title={`${item.title} - Video Guide`}
+                            className="w-full h-full"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               )}

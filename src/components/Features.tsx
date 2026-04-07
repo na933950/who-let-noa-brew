@@ -14,7 +14,7 @@ export default function Features({ features }: FeaturesProps) {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-4">Crafted for the day</h2>
-          <p className="text-base text-wlnb-tan">A focused menu of specialty coffee and traditional chai, prepared with the same care as your favorite local shop, right from home.</p>
+          <p className="text-base text-wlnb-tan">But built for the memory -- a focused menu directly from my food page, and reflecting what type of food I love to share with my friends! </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
