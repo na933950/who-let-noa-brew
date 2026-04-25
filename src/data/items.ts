@@ -34,8 +34,8 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: 'cardamom-honey-latte',
-    title: 'Cardamom Honey Latte',
-    description: 'Silky espresso with velvety steamed milk, infused with a cardamom syrup',
+    title: 'TBD',
+    description: 'TBD',
     image: cortadoImage,
     type: 'beverage',
     price: '$0.00',

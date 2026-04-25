@@ -26,7 +26,7 @@ export default function HeroHome({ title, subtitle, image }: HeroProps) {
             <div className="mt-0.5 text-wlnb-accent">📅</div>
             <div>
               <p className="text-sm font-medium text-wlnb-brown">May 3, 2026</p>
-              <p className="text-xs text-wlnb-tan mt-0.5">3:00 PM - 6:00 PM</p>
+              <p className="text-xs text-wlnb-tan mt-0.5">3:00 PM</p>
             </div>
           </div>
           <div className="w-full h-px bg-wlnb-beige/60"></div>
